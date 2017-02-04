@@ -8,9 +8,9 @@ vector <bool> color;
 
 void bfs() {
 	queue <int> q;
-  for (int i = 0; i < n; ++i) {
+	for (int i = 0; i < n; ++i) {
 		if (!color[i]) {
-      q.push(i);
+    	q.push(i);
 			while (!q.empty()) {
 				int u = q.front();
 				color[u] = true;
