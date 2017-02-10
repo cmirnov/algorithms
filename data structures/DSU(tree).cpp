@@ -14,7 +14,8 @@ public:
   }
 
   int get (int u) {
-    return parent[u] == u ? u : get(parent[u]);
+  //return parent[u] == u ? u : get(parent[u]);
+    return parent[u] == u ? u : (parent[u] = get(parent[u]));
   }
 
   void join (int u, int v) {
