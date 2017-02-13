@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int lower_bound(vector <int> a, int pat) {
+int lower_bound(vector <int> &a, int pat) {
   int l = 0;
   int r = a.size();
   while (r - l > 1) {
