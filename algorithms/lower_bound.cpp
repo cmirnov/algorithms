@@ -2,15 +2,14 @@
 
 using namespace std;
 
-int lower_bound (vector <int> a, int pat) {
+int lower_bound(vector <int> a, int pat) {
   int l = 0;
   int r = a.size();
   while (r - l > 1) {
     int mid = (r + l) / 2;
     if (a[mid] <= pat) {
       l = mid;
-    }
-    else {
+    } else {
       r = mid;
     }
   }
@@ -24,8 +23,10 @@ int main() {
   for (int i = 0; i < n; ++i) {
     cin >> a[i];
   }
+  sort(a.begin(), a.end());
   int pat;
   cin >> pat;
   cout << lower_bound(a, pat);
   return 0;
 }
+
